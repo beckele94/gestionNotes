@@ -13,28 +13,28 @@ public class OutilsCSVToString {
 	public String chargerDepuisFichier() {
 		try {
 			//FileInputStream file = new FileInputStream(nomFichier);
-			Scanner scanner = new Scanner(new File(this.nomFichier));
+			Scanner scanner = new Scanner(new File(nomFichier));
 			
 			while(scanner.hasNextLine()) {
-				this.lesDonnees += scanner.nextLine() + "\n";
+				lesDonnees += scanner.nextLine() + "\n";
 			}
 			scanner.close();
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
 		
-		return this.lesDonnees;
+		return lesDonnees;
 	}
 
 	
 	public String extraireValeur(int numLigne, int numColonne) {
-		String[] lignes = this.lesDonnees.split("\n");
+		String[] lignes = lesDonnees.split("\n");
 		String[] cellules = lignes[numLigne].split("\t");
 		return cellules[numColonne];
 	}
 	
 	public int nbLignes() {
-		String[] lignes = this.lesDonnees.split("\n");
+		String[] lignes = lesDonnees.split("\n");
 		return lignes.length;
 	}
 }
