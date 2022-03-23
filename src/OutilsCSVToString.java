@@ -31,9 +31,5 @@ public class OutilsCSVToString {
 		String[] lignes = lesDonnees.split("\n");
 		return lignes.length;
 	}
-	
-	public String getLesDonnees() {
-		return lesDonnees;
-	}
 }
 

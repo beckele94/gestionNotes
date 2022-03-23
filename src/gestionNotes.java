@@ -24,6 +24,26 @@ public class gestionNotes {
 		System.out.println(ns);
 		System.out.println(ns.get(0).devoir.libelleDevoir);
 		System.out.println(ns.get(0).etudiant.prenomEtudiant);
+		
+		//Affiche la moyenne du premier devoir
+		System.out.println(OutilsCalculs.moyenneDevoir(ns, ds.get(0)));
+		
+		//Affiche la moyenne de la premiere matiere
+		System.out.println(OutilsCalculs.moyenneMatiere(ns, ms.get(0)));
+		
+		//Affiche la moyenne du premier etudiant dans la premiere matiere 
+		System.out.println(OutilsCalculs.moyenneEtudiantMatiere(ns, ms.get(0), es.get(0)));
+		
+		//Affiche la moyenne generale du premier etudiant
+		System.out.println(OutilsCalculs.moyenneEtudiant(ns, ms, es.get(0)));
+		
+		//Affiche la moyenne de la classe 
+		System.out.println(OutilsCalculs.moyenne(ns, ms, es));
+		
+		//Affiche le prenom de l'étudiant qui a la plus faible moyenne générale puis la valeur
+		System.out.println(OutilsCalculs.etudiantMoyenneMini(ns, es, ms).prenomEtudiant);
+		System.out.println(OutilsCalculs.moyenneEtudiant(ns, ms, OutilsCalculs.etudiantMoyenneMini(ns, es, ms)));
+
 	}
 }
 
