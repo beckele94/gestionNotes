@@ -43,7 +43,25 @@ public class gestionNotes {
 		//Affiche le prenom de l'étudiant qui a la plus faible moyenne générale puis la valeur
 		System.out.println(OutilsCalculs.etudiantMoyenneMini(ns, es, ms).prenomEtudiant);
 		System.out.println(OutilsCalculs.moyenneEtudiant(ns, ms, OutilsCalculs.etudiantMoyenneMini(ns, es, ms)));
-
+		
+		//Affiche le prenom de l'étudiant qui a la moyenne générale la plus élevée puis la valeur
+		System.out.println(OutilsCalculs.etudiantMoyenneMaxi(ns, es, ms).prenomEtudiant);
+		System.out.println(OutilsCalculs.moyenneEtudiant(ns, ms, OutilsCalculs.etudiantMoyenneMaxi(ns, es, ms)));
+		
+		//Affiche le prenom de l'étudiant qui a la moyenne la plus faible dans la premiere matière puis la valeur
+		System.out.println(OutilsCalculs.etudiantMoyenneMatiereMini(ns, es, ms.get(0)).prenomEtudiant);
+		System.out.println(OutilsCalculs.moyenneEtudiantMatiere(ns, ms.get(0), OutilsCalculs.etudiantMoyenneMatiereMini(ns, es, ms.get(0))));
+		
+		//Affiche le prenom de l'étudiant qui a la note la plus faible au premier devoir puis la valeur
+		System.out.println(OutilsCalculs.etudiantNoteDevoirMini(ns, ds.get(0)));
+		System.out.println(OutilsCalculs.rechercherNoteDevoirEtudiant(ns, ds.get(0), OutilsCalculs.etudiantNoteDevoirMini(ns, ds.get(0))));
+		
+		//Affiche le prenom de l'étudiant qui a la note la plus élevée au premier devoir puis la valeur
+		System.out.println(OutilsCalculs.etudiantNoteDevoirMaxi(ns, ds.get(0)));
+		System.out.println(OutilsCalculs.rechercherNoteDevoirEtudiant(ns, ds.get(0), OutilsCalculs.etudiantNoteDevoirMaxi(ns, ds.get(0))));
+		
+		//Affiche la note du premier devoir du premier etudiant
+		System.out.println(OutilsCalculs.rechercherNoteDevoirEtudiant(ns, ds.get(0), es.get(0)));
 	}
 }
 
