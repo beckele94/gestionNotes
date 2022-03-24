@@ -1,3 +1,5 @@
+import java.awt.EventQueue;
+import java.awt.Frame;
 import java.util.*;
 
 public class gestionNotes {
@@ -62,6 +64,22 @@ public class gestionNotes {
 		
 		//Affiche la note du premier devoir du premier etudiant
 		System.out.println(OutilsCalculs.rechercherNoteDevoirEtudiant(ns, ds.get(0), es.get(0)));
+		
+		//Lance la fenetre
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Fenetre frame = new Fenetre();
+					frame.setVisible(true);
+					
+					//Rafraichit les JCombos
+					frame.rafraichirJCombos(ms, ds, es);
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 	}
 }
 
