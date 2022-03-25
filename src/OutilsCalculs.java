@@ -119,7 +119,7 @@ public class OutilsCalculs {
 		Etudiant etudiantMaxi = lesEtudiants.get(0);
 			
 		for(int i = 0; i < lesEtudiants.size(); i++) {
-			if(moyenneEtudiantMatiere(lesNotes, laMatiere, etudiantMaxi) > moyenneEtudiantMatiere(lesNotes, laMatiere, lesEtudiants.get(i))) {
+			if(moyenneEtudiantMatiere(lesNotes, laMatiere, etudiantMaxi) < moyenneEtudiantMatiere(lesNotes, laMatiere, lesEtudiants.get(i))) {
 				etudiantMaxi = lesEtudiants.get(i);
 			}
 		}
